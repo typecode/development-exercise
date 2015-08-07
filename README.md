@@ -4,9 +4,9 @@ For this excercise you are tasked with recreating this article page with one int
 
 The page layout should be recreated in HTML/CSS to replicate the mockup as closely as possible. The mockup can be found in two formats, PDF and Illustrator in the excercise directory.
 
-Assets for the page layout can be found in the excercise/Assets directory. Please note that the text of the Article header is transparent to reveal the hero image behind - this is the only element on the page with that effect.
+Assets for the page layout can be found in the excercise/assets directory. Please note that the text of the Article header is transparent to reveal the hero image behind - this is the only element on the page with that effect.
 
-The one non-standard font used, Copernicus, can be found converted for web use in the excercise/Fonts directory. The two other fonts used, Futura and Palatino, are found standard on OS X so it's safe to assume (for the sake of this excercise) that the are present on the user's computer.
+The one non-standard font used, Copernicus, can be found converted for web use in the excercise/fonts directory. The two other fonts used, Futura and Palatino, are found standard on OS X so it's safe to assume (for the sake of this excercise) that the are present on the user's computer.
 
 The primary interactive element of this excerise is the editable article header. Outside of this, everything on the page can be static - no hover states, no nothing. The article header follows a fairly standard 'edit in place' pattern. In edit mode, as a user enter's a title for the page, a slug is automaticallg generated. If the slug already exists in the database, an additional 5 random characters should be appended to the generated slug to dodge the collision.
 
