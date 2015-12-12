@@ -1,4 +1,4 @@
-# Type/Code Development Excercise
+# Type/Code Development Exercise
 
 For this excercise you are tasked with recreating this article page with one interactive element, an editable title.
 
