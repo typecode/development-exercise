@@ -18,11 +18,11 @@ It's not necessary to create any functionality that allows the user to create ad
 
 To create some test data, please populate the database with five pages with the following titles. Each page should have a slug that is generated with the same protocol that will be used in the implementation. It should be possible to quickly populate the database with these pages - so consider creating a fixture.
 
-"It is impossible to walk rapidly and be unhappy."
-"We don't get offered crises, they arrive."
-"I have seen the future and it doesn't work."
-"I dwell in possibility..."
-"Knowledge is power."
+- "It is impossible to walk rapidly and be unhappy."
+- "We don't get offered crises, they arrive."
+- "I have seen the future and it doesn't work."
+- "I dwell in possibility..."
+- "Knowledge is power."
 
 The backend software can be created in whatever language and framework you think is best suited.
 
