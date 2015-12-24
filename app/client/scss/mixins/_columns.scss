@@ -1,0 +1,19 @@
+@mixin column-width($columns) {
+  width: (( 100% / $column-count ) * $columns);
+  float: left;
+}
+
+@mixin max-column-width($columns) {
+  max-width: (( 100% / $column-count ) * $columns);
+  float: left;
+}
+
+@mixin column-margin-left($columns) {
+  margin-left: (( 100% / $column-count ) * $columns);
+}
+
+@mixin column-container {
+  @include clearfix;
+  margin-left: $page-gutter-width;
+  margin-right: $page-gutter-width;
+}

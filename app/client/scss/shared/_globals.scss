@@ -1,0 +1,23 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  &.show-grid:before {
+    content: '';
+    height: 100%;
+    position: fixed;
+    left: $page-gutter-width;
+    right: $page-gutter-width;
+    background-image: url('/images/grid.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    top: 0;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  &.open-menu {
+    overflow: hidden;
+  }
+}

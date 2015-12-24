@@ -1,0 +1,29 @@
+<template name="AppLayout">
+  <main class="app-main">
+    <header id="app-header" class="{{headerClasses}}">
+      <section class="title-menu">
+        <img class="header-logo" alt="Six of one" src="/images/header-logo.svg" />
+        <a class="toggle-menu">
+          <span></span>
+        </a>
+      </section>
+    </header>
+    {{#if showMenu}}
+      <nav id="app-nav">
+        <div class="articles-wrap">
+          <ul class="available-articles">
+            <li class="nav-title">
+              Available articles
+            </li>
+            {{#each articles}}
+              <li>
+                <a href="#">{{ this }}</a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </nav>
+    {{/if}}
+    {{> yield}}
+  </main>
+</template>
