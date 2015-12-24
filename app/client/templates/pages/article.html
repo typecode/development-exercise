@@ -1,0 +1,68 @@
+<template name="Article">
+  <article id="app-article">
+    <section class="article-hero" style="background-image: url({{ backgroundImg }})">
+      <img class="article-hero-bg" src="{{ backgroundImg }}"/>
+    </section>
+    <section class="article-body">
+      <h1 class="article-title {{#if editMode}}editing{{/if}}">
+        {{#if editMode}}
+          <span contenteditable>
+            {{ editTitle }}
+          </span>
+          <small class="slug">
+            <label>slug:</label> {{ slug }}
+          </small>
+        {{else}}
+          {{#each titleLines}}
+            <span>
+              {{ this }}
+            </span>
+          {{/each}}
+          <svg>
+            <defs>
+              <pattern id="title-bg" patternUnits="userSpaceOnUse" width="{{ articleBgWidth }}" height="{{ articleBgHeight }}" x="-{{ titleOffsetX }}" y="-{{ titleOffsetY }}">
+                <image width="{{ articleBgWidth }}" height="{{ articleBgHeight }}" xlink:href="{{ backgroundImg }}"></image>
+              </pattern>
+            </defs>
+            {{#each titleLines}}
+              <text x="20px" y="{{lineY @index}}" class="title-text" style="fill:url(#title-bg);">
+                {{ this }}
+              </text>
+            {{/each}}
+          </svg>
+          {{ getTitleLines }}
+          {{ getElems }}
+        {{/if}}
+
+        <div class="edit-controls">
+          {{#if editMode}}
+            <a class="cancel"></a>
+            <a class="save"></a>
+          {{else}}
+            <a class="edit"></a>
+          {{/if}}
+        </div>
+      </h1>
+
+      <aside class="article-meta">
+        <ul>
+          <li>
+            By <span class="author">Bob Loblaw</span>
+          </li>
+          <li>
+            August 6, 2015
+          </li>
+          <li>
+            <p class="tag">#Environment</p>
+            <p class="tag">#Swift</p>
+            <p class="tag">#Fungus</p>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="article-body-copy">
+        {{{ articleBodyCopy }}}
+      </section>
+    </section>
+  </article>
+</template>

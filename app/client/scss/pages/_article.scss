@@ -1,0 +1,200 @@
+#app-article {
+  width: 100%;
+  height: 100%;
+
+  .article-hero {
+    transform: translate3d(0,0,0);
+    transition: transform 0.1s linear;
+    width: 100%;
+    height: 90%;
+    background-color: #747B92;
+    overflow: hidden;
+    background-repeat: none;
+    background-size: 100% auto;
+    background-position: left top;
+    background-attachment: fixed;
+
+    img {
+      opacity: 0;
+    }
+  }
+
+  .article-hero-bg {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+
+  .article-body {
+    @include column-container;
+    position: relative;
+    padding-bottom: 200px;
+  }
+
+  .article-title {
+    @include column-width(5);
+    @include column-margin-left(1);
+    @include clearfix;
+    position: absolute;
+    bottom: 100%;
+    font-family: 'Copernicus';
+    font-size: 72px;
+    left: -20px;
+    margin-bottom: -0.65em;
+    color: #000;
+    line-height: 1;
+
+    &.editing {
+      background: #FFF;
+    }
+
+    span {
+      background-color: #FFF;
+      float: left;
+      clear: left;
+      padding: 10px 20px;
+      color: transparent;
+
+      &:first-child {
+        padding-top: 20px;
+      }
+
+      + span {
+        margin-top: -15px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 115%;
+      left: 0;
+      top: 0;
+      // display: none;
+    }
+
+    [contenteditable] {
+      color: #1A1A1A;
+      background: #F9F9F9;
+      border: 1px solid #CBCBCB;
+      padding: 15px;
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 20px 20px 10px;
+      outline: none;
+    }
+
+    .slug {
+      font-family: 'Futura Std';
+      font-size: 14px;
+      color: #666;
+      display: block;
+      clear: left;
+      margin: 0 20px 15px;
+
+      label {
+        color: #B2B2B2;
+      }
+    }
+
+    .tmp-div {
+      @include clearfix;
+      // opacity: 0;
+    }
+
+    .edit-controls {
+      position: absolute;
+      right: 100%;
+      bottom: 100%;
+
+      a {
+        transition: transform 0.2s ease;
+        transform: scale3d(1,1,1);
+        display: block;
+        height: 32px;
+        width: 32px;
+        background: #CCC;
+        cursor: pointer;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 14px 14px;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          transform: scale3d(1.1,1.1,1.1);
+          z-index: 2;
+        }
+
+        &.edit {
+          background-color: #F3E13B;
+          background-image: url('/images/pencil.svg');
+        }
+
+        &.cancel {
+          background-color: #E56D3E;
+          background-image: url('/images/x.svg');
+        }
+
+        &.save {
+          background-color: #A2D05A;
+          background-image: url('/images/checkmark.svg');
+        }
+      }
+    }
+  }
+
+  .article-meta {
+    @include column-width(2);
+    @include column-margin-left(1);
+    margin-top: 100px;
+    font-family: 'Futura Std';
+    color: #B2B2B2;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    ul {
+      width: 64%;
+
+      li {
+        line-height: 1.5;
+        border-top: 1px solid #E5E5E5;
+        padding: 10px 5px 15px;
+
+        &:first-child {
+          padding-bottom: 25px;
+        }
+      }
+
+      .author {
+        font-family: 'Copernicus';
+        color: #6F4F31;
+        text-transform: none;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .article-body-copy {
+    @include column-width(5);
+    margin-top: 95px;
+
+    p {
+      font-family: 'Palantino';
+      font-size: 19px;
+      line-height: 1.57;
+      margin-bottom: 1em;
+      width: 85%;
+    }
+
+    blockquote {
+      font-family: 'Copernicus';
+      color: #8A98A6;
+      font-size: 32px;
+      line-height: 1.2;
+      padding: 0.5em 0 1em;
+      margin-left: -6%;
+      width: 78%;
+    }
+  }
+}
