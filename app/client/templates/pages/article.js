@@ -64,7 +64,7 @@
         articleBodyBounds = $articleBody.getBoundingClientRect(),
         headerLogoBounds  = $headerLogo.getBoundingClientRect();
 
-    articleBgHeight.set( articleBgBounds.height );
+    articleBgHeight.set( articleBgBounds.width * (1280/1920) );
     articleBgWidth.set( articleBgBounds.width );
     titleOffsetX.set( titleBounds.left );
     titleOffsetY.set( titleBounds.top );
