@@ -6,6 +6,8 @@ The page layout should be recreated in HTML/CSS to replicate the mockup as close
 
 Assets for the page layout can be found in the excercise/assets directory. Please note that the text of the Article header is transparent to reveal the hero image behind - this is the only element on the page with that effect.
 
+The page layout uses a grid system (guides can be seen in the Illustrator file). At desktop size, this grid is made up of fixed-width gutters on the left and right, with 8 fluid-width columns filling the remaining space in between. (If you're feeling ambitious, you're free to also re-interpret the grid system for smaller viewport sizes).
+
 The one non-standard font used, Copernicus, can be found converted for web use in the excercise/fonts directory. The two other fonts used, Futura and Palatino, are found standard on OS X so it's safe to assume (for the sake of this excercise) that the are present on the user's computer.
 
 The primary interactive element of this excerise is the editable article header. Outside of this, everything on the page can be static - no hover states, no nothing. The article header follows a fairly standard 'edit in place' pattern. In 'edit mode', as a user enters a title for the page, a slug is automatically generated based off of that title. If the slug already exists in the database, an additional 5 random characters should be appended to the generated slug to dodge the collision.
