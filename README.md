@@ -42,6 +42,6 @@ Specifications for the editable are below as user stories:
 - User can click 'discard button' to discard any modifications.
 
 
-Please fork this repository, and commit your implementation. Instructions should be added to this README file that allow us to take the repository, run the application, and evaluate your work. Code should be annotated where sensible.
+Please work from this directory, and share your implementation. Ideally, you can create a Git repository and invite us as a collaborator. Instructions should be added to this README file that allow us to take your code, run the application, and evaluate your work. Code should be annotated where sensible.
 
 As a whole, this exercise aims to touch on a variety of skills and concepts involved in a lot of development at Type/Code. Throughout the process, please feel free to reach out for help - while we're reluctant to give hints for implemenation, we're glad to clarify specifications. Please dedicate no more than 12 hours to the exercise - while 100% completion is great, it's not expected - focus on the areas where you know you can excel and identify areas where you might need some help.
